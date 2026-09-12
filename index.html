@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +9,7 @@ body{font-family:Arial;margin:0;background:#f8f8f8}
 .card{background:white;margin:-20px 15px 15px 15px;padding:20px;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
 .btn{display:block;background:#0a3d2e;color:white;text-align:center;padding:15px;border-radius:10px;text-decoration:none;font-weight:bold;margin:10px 0}
 .btn-whatsapp{background:#25D366}
-.price{color:#0a3d2e;font-weight:bold}
+.chatbox{width:100%;height:500px;border:none;border-radius:15px;background:white}
 </style>
 </head>
 <body>
@@ -22,38 +21,21 @@ body{font-family:Arial;margin:0;background:#f8f8f8}
 
 <div class="card">
 <h3>🏨 Our Rooms - Soroti</h3>
-<p>Standard - <span class="price">80,000 UGX</span> / night</p>
-<p>Deluxe - <span class="price">120,000 UGX</span> / night</p>
-<p>Executive - <span class="price">200,000 UGX</span> / night</p>
+<p>Standard - 80,000 UGX / night</p>
+<p>Deluxe - 120,000 UGX / night</p>
+<p>Executive - 200,000 UGX / night</p>
 
 <a class="btn" href="https://wa.me/256731623252?text=Hi%20Hursey%20Resort%20Soroti,%20I%20want%20to%20book%20a%20room">📅 BOOK ON WHATSAPP</a>
 <a class="btn-whatsapp btn" href="tel:+256731623252">📞 CALL NOW: 0731623252</a>
 
-<h3>🤖 Ask Our Bot</h3>
-<p>Check availability, price, location in Soroti — bot replies instantly.</p>
+<h3>🤖 Chat With Us</h3>
+<p>Ask about rooms, price, location — instant reply:</p>
+<iframe class="chatbox" src="https://cdn.botpress.cloud/webchat/v5.0/shareable.html?configUrl=https://files.bpcontent.cloud/2026/08/31/06/20260831064158-PH55FQFP.json"></iframe>
 </div>
 
 <div class="card" style="text-align:center; font-size:13px; color:gray;">
-<p>Built by Postcoglu Tech — Setup: 300k UGX | Soroti</p>
-<p>WhatsApp: +256731623252</p>
+<p>Built by Postcoglu Tech — Soroti | Setup 300k UGX</p>
 </div>
-
-<script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
-<script>
-window.botpress.init({
-  "botId": "MJ9K36VA",
-  "clientId": "MJ9K36VA",
-  "configuration": {
-    "botName": "Hursey Resort Soroti",
-    "botDescription": "24/7 AI Concierge for Hursey Resort Soroti",
-    "fabImage": "https://cdn-icons-png.flaticon.com/512/4712/4712109.png",
-    "color": "#0a3d2e"
-  }
-});
-window.botpress.on("webchat:ready", () => {
-  window.botpress.open();
-});
-</script>
 
 </body>
 </html>
