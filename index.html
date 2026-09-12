@@ -1,28 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hursey Resort - AI Concierge</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hursey Resort - Kitgum | Book on WhatsApp</title>
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#f0f9ff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
-.card{background:white;max-width:500px;width:100%;padding:32px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.1);text-align:center}
-h1{color:#0c4a6e;margin:0}
-h2{color:#334155;font-size:18px;font-weight:normal}
-p{color:#555;line-height:1.6}
-.btn{display:inline-block;background:#0c4a6e;color:white;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:20px}
-.small{font-size:11px;color:#888;margin-top:24px;word-break:break-all}
+body{font-family:Arial;margin:0;background:#f8f8f8}
+.header{background:#0a3d2e;color:white;padding:30px;text-align:center}
+.card{background:white;margin:-20px 15px 15px 15px;padding:20px;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+.btn{display:block;background:#0a3d2e;color:white;text-align:center;padding:15px;border-radius:10px;text-decoration:none;font-weight:bold;margin:10px 0}
+.btn-whatsapp{background:#25D366}
+.price{color:#0a3d2e;font-weight:bold}
 </style>
 </head>
 <body>
-<div class="card">
-<h1>🏨 Hursey Resort</h1>
-<h2>AI Guest Assistant</h2>
-<p>Welcome! I'm your 24/7 resort concierge. Ask me about rooms, bookings, restaurant, swimming pool, and more.</p>
-<a class="btn" href="https://cdn.botpress.cloud/webchat/v5.0/shareable.html?configUrl=https://files.bpcontent.cloud/2026/08/31/06/20260831064158-PH55FQFP.json" target="_blank">💬 Open Chatbot</a>
-<div class="small">Config: 20260831064158-PH55FQFP.json<br>Powered by Botpress + PostCoglu</div>
+
+<div class="header">
+<h1>Hursey Resort Kitgum</h1>
+<p>24/7 AI Booking Assistant</p>
 </div>
-<script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2026/08/31/06/20260831064158-XU9HX3V4.js"></script>
+
+<div class="card">
+<h3>🏨 Our Rooms</h3>
+<p>Standard - <span class="price">80,000 UGX</span> / night</p>
+<p>Deluxe - <span class="price">120,000 UGX</span> / night</p>
+<p>Executive - <span class="price">200,000 UGX</span> / night</p>
+
+<a class="btn" href="https://wa.me/2567XXXXXXX?text=Hi%20Hursey,%20I%20want%20to%20book">📅 BOOK ON WHATSAPP</a>
+<a class="btn-whatsapp btn" href="tel:+2567XXXXXXX">📞 CALL NOW</a>
+
+<h3>🤖 Ask Our Bot</h3>
+<p>Check availability, price, location — bot replies instantly.</p>
+<div id="botpress-chat"></div>
+</div>
+
+<div class="card" style="text-align:center; font-size:13px; color:gray;">
+<p>Built by Postcoglu Tech — Setup for your hotel: 300k UGX</p>
+<p>WhatsApp: +256... | postcoglu.github.io</p>
+</div>
+
+<!-- API BINDING - Replace YOUR_BOT_ID -->
+<script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+<script>
+window.botpress.init({
+  "botId": "YOUR_BOT_ID_HERE",
+  "clientId": "YOUR_CLIENT_ID_HERE",
+  "configuration": {
+    "botName": "Hursey Resort",
+    "fabImage": "https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
+  }
+});
+window.botpress.on("webchat:ready", () => {
+  window.botpress.open();
+});
+</script>
+
 </body>
 </html>
